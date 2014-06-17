@@ -1,0 +1,74 @@
+# -*- conf -*-
+[user]
+        name = Albert Krewinkel
+        email = tarleb@moltkeplatz.de
+
+[alias]
+        ## Branch Handling
+        br = branch
+
+        # current-branch - prints the name of the currently checked-out branch
+        current-branch = rev-parse --abbrev-ref HEAD
+
+        ## Commit & Checkout
+        ci = commit
+        cim = commit -m
+        co = checkout
+
+        ## Diff
+        df = diff --color
+ 
+        ## Fetch
+        fap = fetch --all --prune
+
+        ## Log and History
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(green)[%an, %cr]%Creset' --abbrev-commit --date=relative
+        lgh = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(green)[%an, %cr]%Creset' --abbrev-commit --date=relative -n 10
+
+        ## Pushing, Pulling and Cherry-Picking
+        pck = cherry-pick
+
+        pl = pull
+        plrb = pull --rebase
+        cont = rebase --continue
+
+        ps = push
+        psh = push
+
+        ## Reset
+        r1 = reset HEAD~1
+        r2 = reset HEAD~2
+        rb = rebase
+        rh = reset --hard
+        rh1 = reset --hard HEAD~1
+        rh2 = reset --hard HEAD~2
+        rst = reset
+
+        ## Status
+        st = status -sb
+        sh = show --color
+
+        # dupes - lists exact duplicates in the current branch (files that are exactly the same)
+        dupes = !"git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
+
+        # latest-commit - prints the commit hash of the last commit (HEAD)
+        latest-commit = rev-list -n 1 HEAD
+
+        # show-root - prints the full path to the repository's top-level
+        show-root = rev-parse --show-toplevel
+
+[core]
+	excludesfile = /home/albert/etc/gitignore
+
+[sendemail]
+	smtpserver = mail.moltkeplatz.de
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = krewinkel
+        smtpsslcertpath = /home/albert/etc/ssl/certs/ca-certificates.crt
+
+[imap]
+        folder = "Drafts"
+        tunnel = "ssh -q -C krewinkel@moltkeplatz.de /usr/lib/dovecot/imap"
+[push]
+	default = simple
