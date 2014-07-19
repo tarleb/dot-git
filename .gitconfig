@@ -1,7 +1,8 @@
 # -*- conf -*-
 [user]
         name = Albert Krewinkel
-        email = tarleb@moltkeplatz.de
+        email = albert@zeitkraut.de
+        signingkey = 248DF82C
 
 [alias]
         ## Branch Handling
@@ -57,15 +58,18 @@
         # show-root - prints the full path to the repository's top-level
         show-root = rev-parse --show-toplevel
 
+[commit]
+  gpgsign = false
+
 [core]
 	excludesfile = /home/albert/etc/gitignore
 
 [sendemail]
-	smtpserver = mail.moltkeplatz.de
+	smtpserver = mail.zeitkraut.de
 	smtpserverport = 587
 	smtpencryption = tls
-	smtpuser = krewinkel
-        smtpsslcertpath = /home/albert/etc/ssl/certs/ca-certificates.crt
+	smtpuser = albert
+        # smtpsslcertpath = /home/albert/etc/ssl/certs/ca-certificates.crt
 
 [imap]
         folder = "Drafts"
