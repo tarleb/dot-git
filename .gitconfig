@@ -75,4 +75,4 @@
         folder = "Drafts"
         tunnel = "ssh -q -C krewinkel@moltkeplatz.de /usr/lib/dovecot/imap"
 [push]
-	default = simple
+	default = current
