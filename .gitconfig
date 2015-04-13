@@ -11,6 +11,10 @@
         # current-branch - prints the name of the currently checked-out branch
         current-branch = rev-parse --abbrev-ref HEAD
 
+        # Delete any branches that have been merged into master
+        # See also: https://gist.github.com/robmiller/5133264
+        delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
         ## Commit & Checkout
         ci = commit
         cim = commit -m
