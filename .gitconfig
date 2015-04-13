@@ -61,6 +61,7 @@
 
         # show-root - prints the full path to the repository's top-level
         show-root = rev-parse --show-toplevel
+	serve = daemon --reuseaddr --base-path=. --export-all --verbose
 
 [commit]
   gpgsign = false
