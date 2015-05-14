@@ -19,6 +19,7 @@
         ci = commit
         cim = commit -m
         co = checkout
+        extend = commit --amend -C HEAD
 
         ## Diff
         df = diff --color
