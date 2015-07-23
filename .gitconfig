@@ -68,7 +68,7 @@
   gpgsign = false
 
 [core]
-	excludesfile = /home/albert/etc/gitignore
+	excludesfile = /home/albert/.gitignore
 
 [sendemail]
 	smtpserver = mail.zeitkraut.de
