@@ -2,7 +2,7 @@
 [user]
         name = Albert Krewinkel
         email = albert@zeitkraut.de
-        signingkey = 248DF82C
+        signingkey = 1F631124
 
 [alias]
         ## Branch Handling
